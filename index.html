@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .product-card {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            padding: 10px;
+        }
+        
+        .sidebar {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">TechShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto">
+                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Simple Sidebar -->
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <h4>Categories</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Laptops</li>
+                        <li class="list-group-item">Smartphones</li>
+                        <li class="list-group-item">Headphones</li>
+                        <li class="list-group-item">Watches</li>
+                    </ul>
+                    
+                    <h4 class="mt-4">Price</h4>
+                    <div class="mb-3">
+                        <label>Min Price:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Max Price:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    
+                    <button class="btn btn-primary">Filter</button>
+                </div>
+            </div>
+            
+            <!-- Basic Product Grid -->
+            <div class="col-md-9">
+                <h3>Products</h3>
+                
+                <div class="row">
+                    <!-- Product 1 -->
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="phone.png" class="product-image" alt="Smartphone">
+                            <div class="card-body">
+                                <h5 class="card-title">Smartphone</h5>
+                                <p class="card-text">$499.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="wired_headphone.png" class="product-image" alt="Headphones">
+                            <div class="card-body">
+                                <h5 class="card-title">Headphones</h5>
+                                <p class="card-text">$199.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="earbuds.png" class="product-image" alt="Wireless Earbuds">
+                            <div class="card-body">
+                                <h5 class="card-title">Wireless Earbuds</h5>
+                                <p class="card-text">$149.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="headphone.png" class="product-image" alt="Bluetooth Headphones">
+                            <div class="card-body">
+                                <h5 class="card-title">Bluetooth Headphones</h5>
+                                <p class="card-text">$89.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="watch.png" class="product-image" alt="Smartwatch">
+                            <div class="card-body">
+                                <h5 class="card-title">Smartwatch</h5>
+                                <p class="card-text">$299.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="tablet.png" class="product-image" alt="Tablet">
+                            <div class="card-body">
+                                <h5 class="card-title">Tablet</h5>
+                                <p class="card-text">$349.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Simple Pagination -->
+                <div class="text-center mt-4">
+                    <button class="btn btn-secondary me-2">Previous</button>
+                    <button class="btn btn-primary me-2">1</button>
+                    <button class="btn btn-outline-primary me-2">2</button>
+                    <button class="btn btn-outline-primary me-2">3</button>
+                    <button class="btn btn-secondary">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center p-3 mt-5">
+        <p>© 2025 MyShop - Created by a Student</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
